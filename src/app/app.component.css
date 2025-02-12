@@ -1,0 +1,75 @@
+/* Contenedor general */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Encabezado */
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Contenedor para el formulario y listado */
+  .content {
+    display: flex;
+    flex-direction: column;  /* Por defecto, en columna para móviles */
+    gap: 20px;  /* Espacio entre secciones */
+  }
+  
+  /* Sección del formulario */
+  .news-form {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para el formulario */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  .btn {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* Sección del listado de noticias */
+  .news-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .news-item {
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+  }
+  .news-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* Media Query para dispositivos de escritorio */
+  @media (min-width: 768px) {
+    .content {
+      flex-direction: row;  /* En fila en pantallas anchas */
+    }
+    .news-form, .news-list {
+      flex: 1;  /* Cada sección ocupará el mismo ancho */
+    }
+  }
+  
