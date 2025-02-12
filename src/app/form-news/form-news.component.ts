@@ -1,55 +1,32 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
-export interface News {
-  title: string;
-  content: string;
-}
+import { INews } from '../interfaces/inews';
 
 @Component({
   selector: 'app-form-news',
   standalone: true,
   imports: [FormsModule],
   template: `
-    <section class="news-form">
-      <h2>Publicar una Noticia</h2>
-      <form (ngSubmit)="submitNews()">
-        <div class="form-group">
-          <label for="title">Título:</label>
-          <input
-            type="text"
-            id="title"
-            placeholder="Escribe el título"
-            [(ngModel)]="news.title"
-            name="title"
-          />
-        </div>
-        <div class="form-group">
-          <label for="content">Contenido:</label>
-          <textarea
-            id="content"
-            placeholder="Escribe el contenido"
-            [(ngModel)]="news.content"
-            name="content"
-          ></textarea>
-        </div>
-        <button type="submit" class="btn">Publicar</button>
-      </form>
-    </section>
+    <!-- ... plantilla del formulario ... -->
   `,
   styleUrls: ['./form-news.component.css']
 })
 export class FormNewsComponent {
-  @Output() newsAdded = new EventEmitter<News>();
+  @Output() newsAdded = new EventEmitter<INews>();
 
-  news: News = { title: '', content: '' };
+  news: INews = { title: '', image: '', content: '', date: '' };
 
   submitNews(): void {
-    if (this.news.title && this.news.content) {
-      // Emitimos una copia de la noticia
-      this.newsAdded.emit({ ...this.news });
-      // Reiniciamos el formulario
-      this.news = { title: '', content: '' };
+    if (
+      !this.news.title.trim() ||
+      !this.news.image.trim() ||
+      !this.news.content.trim() ||
+      !this.news.date.trim()
+    ) {
+      alert('Todos los campos son obligatorios.');
+      return;
     }
+    this.newsAdded.emit({ ...this.news });
+    this.news = { title: '', image: '', content: '', date: '' };
   }
 }

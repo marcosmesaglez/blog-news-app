@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { FormNewsComponent, News } from './form-news/form-news.component';
+import { FormNewsComponent } from './form-news/form-news.component';
 import { NewsListComponent } from './news-list/news-list.component';
+import { INews } from './interfaces/inews';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,7 @@ import { NewsListComponent } from './news-list/news-list.component';
         <h1>Blog de Noticias</h1>
       </header>
       <div class="content">
-        <!-- Componente de formulario. Se emite un evento cuando se agrega una noticia -->
         <app-form-news (newsAdded)="addNews($event)"></app-form-news>
-        <!-- Componente de listado que recibe la lista de noticias -->
         <app-news-list [newsList]="newsList"></app-news-list>
       </div>
     </div>
@@ -22,9 +21,22 @@ import { NewsListComponent } from './news-list/news-list.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  newsList: News[] = [];
+  newsList: INews[] = [
+    {
+      title: 'Noticia Inicial 1',
+      image: 'https://example.com/image1.jpg',
+      content: 'Esta es la primera noticia inicial.',
+      date: '2023-01-01'
+    },
+    {
+      title: 'Noticia Inicial 2',
+      image: 'https://example.com/image2.jpg',
+      content: 'Esta es la segunda noticia inicial.',
+      date: '2023-02-01'
+    }
+  ];
 
-  addNews(newNews: News): void {
+  addNews(newNews: INews): void {
     this.newsList.push(newNews);
   }
 }

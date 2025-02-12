@@ -1,46 +1,45 @@
 /* Estilos para el formulario de noticias */
 .news-form {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px; /* Separación inferior, opcional */
-  }
-  
-  .news-form h2 {
-    margin-top: 0;
-    margin-bottom: 15px;
-  }
-  
-  .news-form .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .news-form .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .news-form .form-group input,
-  .news-form .form-group textarea {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  .news-form .btn {
-    background-color: #007bff;
-    border: none;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .news-form .btn:hover {
-    background-color: #0056b3;
-  }
-  
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.news-form h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.news-form .form-group {
+  margin-bottom: 15px;
+}
+
+.news-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.news-form .form-group input,
+.news-form .form-group textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.news-form .btn {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.news-form .btn:hover {
+  background-color: #0056b3;
+}
