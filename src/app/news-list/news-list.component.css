@@ -1,0 +1,29 @@
+/* Estilos para el listado de noticias */
+.news-list {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .news-list h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .news-list .news-item {
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+  }
+  
+  .news-list .news-item:last-child {
+    border-bottom: none;
+  }
+  
+  .news-list .news-item h3 {
+    margin: 0 0 5px;
+  }
+  
+  .news-list .news-item p {
+    margin: 0;
+  }
+  
