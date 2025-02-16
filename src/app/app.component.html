@@ -1,12 +1,3 @@
-<div class="container">
-  <header class="header">
-    <h1>Blog de Noticias</h1>
-  </header>
-  <div class="content">
-    <!-- Componente del formulario: se emite el evento newsAdded para agregar una noticia -->
-    <app-form-news (newsAdded)="addNews($event)"></app-form-news>
-    <!-- Componente del listado: recibe la lista de noticias a través del binding -->
-    <app-news-list [newsList]="newsList"></app-news-list>
-  </div>
-</div>
+<!-- Renderizamos el componente Blog que actúa como contenedor principal -->
+<app-blog></app-blog>
 

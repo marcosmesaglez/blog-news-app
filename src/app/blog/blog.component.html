@@ -1,0 +1,12 @@
+<div class="blog-container">
+    <header class="blog-header">
+      <h1>Blog de Noticias</h1>
+    </header>
+    <div class="blog-content">
+      <!-- Se incluye el formulario para agregar noticias -->
+      <app-form-news (newsAdded)="addNews($event)"></app-form-news>
+      <!-- Se muestra el listado de noticias -->
+      <app-news-list [newsList]="newsList"></app-news-list>
+    </div>
+  </div>
+  

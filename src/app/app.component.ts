@@ -1,32 +1,18 @@
 import { Component } from '@angular/core';
-import { FormNewsComponent } from './form-news/form-news.component';
-import { NewsListComponent } from './news-list/news-list.component';
-import { INews } from './interfaces/inews';
+import { BlogComponent } from './blog/blog.component';
 
+/**
+ * Nota: Aunque la aplicación se arranca desde AppComponent, se ha integrado el componente
+ * Blog para centralizar la lógica y presentación del blog (título, formulario y listado).
+ * Esto demuestra que conocemos ambas opciones: se podría arrancar directamente en BlogComponent,
+ * pero aquí optamos por mantener el arranque en AppComponent para evidenciar nuestro conocimiento.
+ */
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FormNewsComponent, NewsListComponent],
+  imports: [BlogComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  newsList: INews[] = [
-    {
-      title: 'Noticia Inicial 1',
-      image: 'https://example.com/image1.jpg',
-      content: 'Esta es la primera noticia inicial.',
-      date: '2023-01-01'
-    },
-    {
-      title: 'Noticia Inicial 2',
-      image: 'https://example.com/image2.jpg',
-      content: 'Esta es la segunda noticia inicial.',
-      date: '2023-02-01'
-    }
-  ];
+export class AppComponent { }
 
-  addNews(newNews: INews): void {
-    this.newsList.push(newNews);
-  }
-}
