@@ -7,17 +7,7 @@ import { INews } from './interfaces/inews';
   selector: 'app-root',
   standalone: true,
   imports: [FormNewsComponent, NewsListComponent],
-  template: `
-    <div class="container">
-      <header class="header">
-        <h1>Blog de Noticias</h1>
-      </header>
-      <div class="content">
-        <app-form-news (newsAdded)="addNews($event)"></app-form-news>
-        <app-news-list [newsList]="newsList"></app-news-list>
-      </div>
-    </div>
-  `,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
